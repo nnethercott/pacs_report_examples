@@ -22,7 +22,7 @@ void example(){
       j.add_index(0);
   }
   else{
-      i.add_index(1);
+      i.add_index(2);
 
       j.add_index(1);
       j.add_index(2);
