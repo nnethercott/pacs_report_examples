@@ -4,7 +4,7 @@ Collection of implemented &amp; tested examples as reported in the submitted pro
 ## Installation 
 
 ### Prereqs 
-Before proceeding with the steps in this setup you need to first build [lifex/pyfex](https://gitlab.com/lifex/pyfex) locally according to the listed steps(assuming you have access privileges).
+Before proceeding with the steps in this setup you need to first build [lifex/pyfex](https://gitlab.com/lifex/pyfex) locally according to the listed steps (assuming you have access privileges).
 
 After this you can proceed with the cloning of the repo through 
 ```
