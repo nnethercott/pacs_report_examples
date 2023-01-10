@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ### Building examples
 Within each example folder there is a mix of C++ and Python examples (this project dealt with exposing a Python interface to C++ libraries).  Running most of the Python examples is pretty straight forward except in the case where parallelism is employed.  For these scripts (indicated in the readme) execute as following:
 ```
-mpirun -np j python3
+mpirun -np j python3 ./file.py
 ```
 where j is the number of processes you wish to execute on (for some examples we impose a maximum number of allowable ranks). 
 
