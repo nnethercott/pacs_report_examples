@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#PBS -S /bin/bash
+#PBS -l walltime=12:00:00
+#PBS -l nodes=1:ppn=20
+#PBS -q gigat
+
+#PBS -N test
+
+cd ${PBS_O_WORKDIR}
+
+sort ${PBS_NODEFILE} | uniq -c | awk '{ printf("%s\n", $2); }' > mpd.nodes
+
+MYPATH="./out"
+mkdir $MYPATH
+MYFILE="r6"
+
+## Run the executable
+for i in $(seq 1 2 20)
+do
+	mpiexec -machinefile mpd.nodes -n $i -npernode 20 python3 ./speedup_sim.py -r 6 --iters 3 >> $MYPATH/$MYFILE.txt 2>&1
+done
+
